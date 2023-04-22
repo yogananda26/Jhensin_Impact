@@ -1,0 +1,772 @@
+@font-face {
+    font-family: "apple";
+    src: url("SF-Pro-Display-Medium.otf");
+}
+:root {
+    --primary: #a6c3c1;
+    --secondary: #388087;
+    --acc1: #BADFE7;
+    --transparant: #11ffee00;
+}
+* {
+
+    margin: 0;
+    padding: auto;
+    box-sizing: border-box;
+}
+/* *:after {
+    box-sizing: border-box;
+} */
+a {
+    text-decoration: none;
+}
+
+body{
+    overflow-x:hidden;
+}
+.header1 {
+    position: fixed;
+    top: 0px;
+    height: 9vh;
+    width: 100vw;
+    /* padding: .300rem .5rem; */
+    /* margin: 0px 0px 0px 20px; */
+    text-shadow: 2px 2px 4px rgb(99, 73, 14);
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 3px 7px 0 rgb(0 0 0 / 35%);
+    z-index: 3;
+    display: flex;
+    align-items:center;
+}
+
+#header1_part1 {
+    object-fit: cover;
+    position: relative;
+    left:10vh;
+    height: 80%;
+    width: 9%;
+}
+.nav_header {
+    padding: 3vh;
+    position: absolute;
+    right: 2%;
+    background: rgba(0, 0, 0, 0, 0);
+    height: 0vh;
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    /* flex-direction:row; */
+}
+
+.a1 {
+    position: relative;
+    /* background-color: var(--primary); */
+    color: #ccc;;
+    text-shadow: 2px 2px 4px rgb(99, 73, 14);
+    text-decoration: none;
+    font-family: "apple";
+    font-size: 17px;
+
+}
+
+.a1:after {
+    content: "";
+    position: absolute;
+    background-color: var(--secondary);
+    height: 4px;
+    width: 0%;
+    left: 0;
+    bottom: -10px;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+.a1:hover::after {
+    width: 100%;
+}
+
+/* this is starting of landing page_maps */
+.first_map{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    top:0px;
+}
+.detail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width:100%;
+    background-color: rgba(1,1,1,0.5);
+    height: 100%;
+    opacity : 0;
+}
+.detail .container{ 
+    position: absolute;
+    justify-content: absolute;
+    align-items: center;
+    height: 80%;
+    width: 40%;
+    background-color: white;
+
+}
+.container_home{
+    height: 100%;
+    width: 100%; 
+    background-image: url("./background_maps1.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container_home img{
+    height: 1.5%;
+    width: 30%;
+    margin:10px;
+    margin-bottom: 20px;
+}
+.home_desc {
+    font-family: "apple";
+    width:50%;
+    height: 30%;
+    text-align: center;
+    font-size:18px;
+    color:white;
+    text-shadow: 0 0 12px rgba(110,159,193,0.36), 0 0 12px rgba(110,159,193,0.36);
+    font-weight: 1;
+    line-height: 1.8;
+    
+}
+.checkout{
+    font-family: "apple";
+    font-size: 1.2vw;
+    color:white;
+    background-image: url("./bg_font_checkout.png");
+    background-repeat: no-repeat;
+    margin-top:10vh;
+    text-shadow: 0 0 12px rgba(47,125,178,0.45), 0 0 12px rgba(47,125,178,0.45);
+    width: 45%;
+    height: 4%;
+    text-align: center;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.container_home h1{
+    color: white;
+    font-family: "apple";
+    font-size: 5vw;
+    font-weight: 1;
+}
+
+/* this is the end of landing page_maps */
+
+/* this is starting of maps 2 */
+
+.second_map{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+.container_map1{
+    background-image: url("./bg_maps2.jpg");
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.maps1_content{
+    position:relative;
+    top:0px;
+    width: 50%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30vh;
+
+}
+.maps1_content img{
+    width: 12vh;
+    margin: 30px;
+}
+.maps_city_name1{
+    color:white;
+    text-shadow: 0 0 12px rgba(47,125,178,0.45), 0 0 12px rgba(47,125,178,0.45);
+    font-size: 4.5vh;
+    margin: 10px;
+    font-family: "apple";
+    font-weight: 1;
+    
+}
+/* .maps_city_name1::before{
+    content:'';
+    position: absolute;
+    background-image: url("./before_after.png");
+    width:100%;
+    height: 20%;
+    left:20%;
+    top: 64%;
+    transform: scaleX(-1);
+    background-repeat: no-repeat; 
+}
+.maps_city_name1::after{
+    content:'';
+    position: absolute;
+    background-image: url("./before_after.png");
+    width:100%;
+    height: 20%;
+    right:20%;
+    top: 64%;
+    background-repeat: no-repeat; 
+} */
+.maps_desc1{
+    height: auto;
+    width: auto;
+    margin-top: 20px;
+    text-align: center;
+    color:white;
+    font-size: 18px;
+    text-shadow: 0 0 12px rgba(47,125,178,0.45), 0 0 12px rgba(47,125,178,0.45);
+    font-family: "apple"
+}
+
+.more_in_maps1{
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    border-color: transparent;
+    margin-top: 80px;
+    justify-content: space-between;
+    cursor: pointer;
+
+}
+.more_in_maps1::before{
+    background-image: url("./click_on_me.png");
+    content:'';
+    height: 60px;
+    width: 60px;
+    margin-bottom: 10px;
+    background-size: 100%;
+    transform-origin: center;
+}
+.more_in_maps1 p{
+    line-height: 31px;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    font-family: "apple"
+}
+
+.more_detail_maps1{
+    position: fixed;
+    top:0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display:flex;
+    justify-content: center;
+    /* align-items: center; */
+    height: 100vh;
+    width:100vw;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.77); ;
+    z-index : -1;
+}
+/* this section for displaying many map in this maps1 */
+.wraps_more{
+    position: relative;
+    margin-top: 10vh;
+    height: 100%;
+    width: 55%;
+    /* background-color: black; */
+}
+.exit_button{
+    position:absolute;
+    top:0px;
+    right: 0px;
+    background-image : url("./exit_button.png");
+    background-repeat: no-repeat;
+    background-size: 2.5vh;
+    background-position: center;
+    border-radius: 10px;
+    width: 8.5%;
+    height: 7%;
+    cursor: pointer;
+    background-color: rgba(128,128,128,0.1);
+    border-color: transparent;
+}
+.detail_tittle{
+    position: absolute;
+    top:0px;
+    left: 0px;
+    height: 7%;
+    width: 87%;
+    border-radius: 10px;
+    background-color:  rgba(128,128,128,0.1);
+    text-align: center;
+    padding:1% 0% 1% 1%;
+    color: white;
+    font-family: "apple";
+    font-size: 2rem;
+}
+.detail_article{ 
+    position: absolute;
+    top:15%;
+    height: 65%;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.detail_article_more{ 
+    position:relative; 
+    width: 100%;
+    height: auto;
+    margin-right: 50px;
+
+}
+.detail_article_more{
+    position: relative;
+}
+.detail_article h1{
+    position: relative;
+    color:white;
+    width: 100%;
+    height: 10%;
+    padding-top:0.3rem;
+    padding-left: 1rem;
+    background-color:rgba(128,128,128,0.1);
+    font-family: "apple";
+    font-weight: 1;
+    border-radius:10px;
+}
+.detail_article p{
+    position:relative;
+    color:white;
+    font-family:"apple";
+    font-weight: 1;
+    line-height:1.8;
+    font-size: 18px;
+    left:0px;
+
+}
+/* this is the end code */
+/* ============================================================== */
+/* this is the end of maps 2 */
+
+
+
+/* this is starting of maps 3 */
+
+.third_map{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container_map2{
+    background-image: url("liyur_bg.jpg");
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.maps2_content{
+    position:relative;
+    top:0px;
+    width: 50%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30vh;
+}
+.maps2_content img{
+    width: 12vh;
+    margin: 30px;
+}
+.maps_city_name2{
+    color:white;
+    text-shadow: 0 0 12px rgba(47,125,178,0.45), 0 0 12px rgba(47,125,178,0.45);
+    font-size: 4.5vh;
+    margin: 10px;
+    font-family: "apple";
+    font-weight: 1;   
+}
+.maps_desc2{
+    height: auto;
+    width: auto;
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: center;
+    color:white;
+    text-shadow: 0 0 12px rgba(47,125,178,0.45), 0 0 12px rgba(47,125,178,0.45);
+    font-family: "apple"
+}
+
+.more_in_maps2{
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    border-color: transparent;
+    margin-top: 80px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.more_in_maps2::before{
+    background-image: url("./click_on_me.png");
+    content:'';
+    height: 60px;
+    width: 60px;
+    margin-bottom: 10px;
+    background-size: 100%;
+    transform-origin: center;
+}
+.more_in_maps2 p{
+    line-height: 31px;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    font-family: "apple"
+}
+
+.fourth_map{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container_map3{
+    background-image: url("inazuma_bg2.jpg");
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.maps3_content{
+    position:relative;
+    top:0px;
+    width: 50%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30vh;
+}
+.maps3_content img{
+    width: 12vh;
+    margin: 30px;
+}
+.maps_city_name3{
+    color:white;
+    text-shadow: 0 0 12px rgba(47,125,178,0.45), 0 0 12px rgba(47,125,178,0.45);
+    font-size: 4.5vh;
+    margin: 10px;
+    font-family: "apple";
+    font-weight: 1;   
+}
+.maps_desc3{
+    height: auto;
+    width: auto;
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+    color:white;
+    text-shadow: 0 0 12px rgba(47,125,178,0.45), 0 0 12px rgba(47,125,178,0.45);
+    font-family: "apple"
+}
+
+.more_in_maps3{
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    border-color: transparent;
+    margin-top: 80px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.more_in_maps3::before{
+    background-image: url("./click_on_me.png");
+    content:'';
+    height: 60px;
+    width: 60px;
+    margin-bottom: 10px;
+    background-size: 100%;
+    transform-origin: center;
+}
+.more_in_maps3 p{
+    line-height: 31px;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    font-family: "apple"
+}
+.fifth_map{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+.container_map4{
+    background-image: url("semeru_bg2.jpg");
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.maps4_content{
+    position:relative;
+    top:0px;
+    width: 50%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30vh;
+}
+.maps4_content img{
+    width: 12vh;
+    margin: 30px;
+}
+.maps_city_name4{
+    color:white;
+    text-shadow: 0 0 12px rgba(47,125,178,0.45), 0 0 12px rgba(47,125,178,0.45);
+    font-size: 4.5vh;
+    margin: 10px;
+    font-family: "apple";
+    font-weight: 1;   
+}
+.maps_desc4{
+    height: auto;
+    width: auto;
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+    color:white;
+    text-shadow: 0 0 12px rgba(47,125,178,0.45), 0 0 12px rgba(47,125,178,0.45);
+    font-family: "apple"
+}
+
+.more_in_maps4{
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    border-color: transparent;
+    margin-top: 80px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.more_in_maps4::before{
+    background-image: url("./click_on_me.png");
+    content:'';
+    height: 60px;
+    width: 60px;
+    margin-bottom: 10px;
+    background-size: 100%;
+    transform-origin: center;
+}
+.more_in_maps4 p{
+    line-height: 31px;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    font-family: "apple";
+
+}
+.more_detail_maps2{
+    position: fixed;
+    top:0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display:flex;
+    justify-content: center;
+    /* align-items: center; */
+    height: 100vh;
+    width:100vw;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.77); ;
+    z-index : -1;
+}
+
+.more_detail_maps3{
+    position: fixed;
+    top:0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display:flex;
+    justify-content: center;
+    /* align-items: center; */
+    height: 100vh;
+    width:100vw;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.77); ;
+    z-index : -1;
+}
+.more_detail_maps4{
+    position: fixed;
+    top:0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display:flex;
+    justify-content: center;
+    /* align-items: center; */
+    height: 100vh;
+    width:100vw;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.77); ;
+    z-index : -1;
+}
+.more_detail_maps4 .more_maps_img{
+    width: 80%;
+    height: auto;
+    margin: 2% auto 10% 0%;
+}
+.more_detail_maps3 .more_maps_img{
+    width: 80%;
+    height: auto;
+    margin: 2% auto 10% 0%;
+}
+.more_detail_maps2 .more_maps_img{
+    width: 80%;
+    height: auto;
+    margin: 2% auto 10% 0%;
+}
+.more_detail_maps1 .more_maps_img{
+    width: 80%;
+    height: auto;
+    margin: 2% auto 10% 0%;
+}
+
+
+footer {
+    position: relative;
+    background-color: black;
+    width: 100vw;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main_footer {
+    position: relative;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 90%;
+}
+
+.main_footer img {
+    width: 30%;
+    height: 20%;
+}
+
+.wrapper_logo {
+
+    position: relative;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+    /* flex-direction: column; */
+}
+
+.container_logo {
+    position: relative;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.container_logo span {
+    color: rgba(140, 140, 140, 1);
+    font-family: "apple";
+    font-size: 15px;
+}
+
+.last_container span {
+    color: white;
+    font-family: "apple";
+    font-size: 15px;
+
+}
+
+.container_logo .image1 {
+    /* width: 14.9%;
+    height: 58%;
+    padding: 15px;
+    object-fit: cover; */
+    height: 60%;
+    width: 14%;
+    padding: 15px;  
+}
+
+.wrapper_logo img {
+    display: block;
+    padding: 5px;
+    width: 10%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.last_container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+}
+
+.container_footer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding: 5px;
+}
+
+.container_footer a {
+    color: rgba(140, 140, 140, 1);
+    padding: 10px;
+    font-family: "apple"
+}

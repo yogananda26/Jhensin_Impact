@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <!-- Remix Icons -->
+      <link
+         href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+         rel="stylesheet"
+      />
+
+      <link rel="stylesheet" href="style.css" />
+      <title>Register Page</title>
+   </head>
+   <body>
+      <div class="header1" id="header">
+         <nav class="nav_header">
+           <a class="a1"
+             href="./login.html"
+             >Log In</a>
+           <a class="a1"
+             href="landing_page.html"
+             >Home</a>
+           <a class="a1" href="landing_page_hero.html"
+             >Character</a>
+           <a class="a1" href="./maps.html">Maps</a>
+           <a class="a1" href="./about_us.html">About Us</a>
+         </nav>
+   
+         <img id="header1_part1" src="logo_jenshin-removebg-preview.png" alt="logo jenshin impact">
+         <!-- <div id="header1_part2">
+           This is for student whos want to learn math in depth
+         </div> -->
+     </div>
+      <div class="bgimage">
+         <img class="background" src="./regis_bg.jpg" alt="Foto BG" />
+         <div class="container">
+            <div class="heading">Welcome Traveler</div>
+            <p>Welcome! Please register to continue.</p>
+            <form
+               id="form"
+               action="/"
+               class="login__form"
+               method="post"
+               onsubmit="if(document.getElementById('agreement').checked) {return true; } else {alert('Please checklist the agreement box'); return false; }"
+            >
+               <div class="card-details">
+                  <div class="card-box">
+                     <label class="details">Full Name</label>
+                     <input type="text" placeholder="Enter your name" id="nameuser" />
+                     <div class="error tes"></div>
+                  </div>
+                  <div class="card-box">
+                     <label class="details">Age</label>
+                     <input type="number" placeholder="Enter your age" id="age" />
+                     <div class="error tes"></div>
+                  </div>
+                  <div class="card-box">
+                     <label class="details">Username</label>
+                     <input type="text" placeholder="Enter your username" id="usernameuser" />
+                     <div class="error tes"></div>
+                  </div>
+                  <div class="card-box">
+                     <label class="details">Email</label>
+                     <input type="email" placeholder="Enter your email address" id="email" />
+                     <div class="error tes"></div>
+                  </div>
+                  <div class="card-box">
+                     <label class="details">Password</label>
+                     <input type="password" placeholder="Enter your password" id="input-pass" />
+                     <i class="ri-eye-off-line login__eye" id="input-icon"></i>
+                     <div class="error tes"></div>
+                  </div>
+                  <div class="card-box">
+                     <label class="details">Confirm Password</label>
+                     <input type="password" placeholder="Enter your password" id="input-passc" />
+                     <i class="ri-eye-off-line login__eye" id="input-iconc"></i>
+                     <div class="error tes"></div>
+                  </div>
+                  <div class="login__check">
+                     <input
+                        type="checkbox"
+                        class="login__check-input"
+                        id="agreement"
+                        value="agreement"
+                     />
+                     <label for="agreement" class="login__check-label"
+                        >By clicking this, you agree to our user terms.</label
+                     >
+                  </div>
+               </div>
+               <div>
+                  <div class="login__buttons">
+                     <button type="submit" class="login__button login__button-ghost">
+                        Register
+                     </button>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+
+      <script src="regis_main.js"></script>
+   </body>
+   <footer>
+      <div class="main_footer">
+        <div class="wrapper_logo">
+          <img src="logo_jenshin-removebg-preview.png" alt="logo_jhenshin">
+        </div>
+        <div class="container_footer">
+          <a href="">Privacy Policy</a>
+          <a href="">Terms of Service</a>
+          <a href="">About us</a>
+          <a href="">Contact Us</a>
+        </div>
+        <div class="container_logo">
+          <img class="image1" src="in_game_purchase.png" alt="gambarps">
+          <span>"PlayStation Family Mark," "PS5 logo" and "PS4 logo" are registered 
+                trademarks or trademarks of Sony Interactive Entertainment Inc.</span>
+          <span>Epic, Epic Games, Epic Games Store, the Epic Games Store logo, and Epic 
+                Online Services are trademarks and/or registered trademarks of Epic Games
+                . All other trademarks are the 
+                property of their respective owners.</span>
+          </div>
+        <img class="hoyo_img" src="hoyoverse.png" alt="gambar hoyo">
+        <div class="last_container">
+          <span>Copyright © COGNOSPHERE. All Rights Reserved.</span>
+        </div>
+      </div>
+    </footer>
+</html>

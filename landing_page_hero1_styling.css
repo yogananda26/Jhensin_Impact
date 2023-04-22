@@ -1,0 +1,437 @@
+@font-face {
+    font-family: "apple";
+    src: url("./SF-Pro-Display-Medium.otf");
+}
+:root {
+    --primary: #a6c3c1;
+    --secondary: #388087;
+    --acc1: #BADFE7;
+    --transparant: #11ffee00;
+}
+
+
+* {
+
+    margin: 0;
+    padding: auto;
+    box-sizing: border-box;
+}
+
+/* *:after {
+    box-sizing: border-box;
+} */
+
+a {
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+/* this is for styling */
+.header1 {
+    position: fixed;
+    top: 0px;
+    height: 9vh;
+    width: 100vw;
+    /* padding: .300rem .5rem; */
+    /* margin: 0px 0px 0px 20px; */
+    text-shadow: 2px 2px 4px rgb(99, 73, 14);
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 3px 7px 0 rgb(0 0 0 / 35%);
+    z-index: 3;
+    display: flex;
+    align-items:center;
+}
+
+#header1_part1 {
+    object-fit: cover;
+    position: relative;
+    left:10vh;
+    height: 80%;
+    width: 9%;
+}
+.nav_header {
+    padding: 3vh;
+    position: absolute;
+    right: 2%;
+    background: rgba(0, 0, 0, 0, 0);
+    height: 0vh;
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    /* flex-direction:row; */
+}
+
+.a1 {
+    position: relative;
+    /* background-color: var(--primary); */
+    color: #ccc;;
+    text-shadow: 2px 2px 4px rgb(99, 73, 14);
+    text-decoration: none;
+    font-family: "apple";
+    font-size: 17px;
+
+}
+
+.a1:after {
+    content: "";
+    position: absolute;
+    background-color: var(--secondary);
+    height: 4px;
+    width: 0%;
+    left: 0;
+    bottom: -10px;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+.a1:hover::after {
+    width: 100%;
+}
+
+.hero_scrol{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-image: url("./liyur_bg.jpg");
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    background-position: 50% 100%;
+    overflow: hidden;
+    
+    animation-name: animate;
+    animation-direction: alternate-reverse;
+    animation-duration: 7s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+}
+.hero_scrol::after{
+    position:absolute;
+    content: '';
+    bottom:0;
+    background-image: url("./sparkling.png");
+    width: 100%;
+    height: 50%;
+    background-position: bottom 100% right 100%;
+    object-fit: cover;
+}
+.char_sidebar{
+    position: absolute;
+    top: 0%;
+    height: 100%;
+    z-index: 9;
+    width : 30%;
+    padding-top:348px;
+    padding-left: 0;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    text-align: start; */
+}
+.char_sidebar_list{
+    text-align: start;
+    padding-left : 56px;
+    cursor:pointer;
+    width: 100%;
+    height: 45px;
+    font-size: 25px;
+    background-image: url(./download.png);
+    background-size: 40px;
+    background-position-x: 18px;
+    background-repeat: no-repeat;  
+}
+.char_sidebar_list::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background: rgba(255,255,255,0.14);
+    left: 37px;
+    top: 0;
+    z-index: 9;
+    /* padding:0 */
+
+}
+.char_sidebar_list a{
+    color: white;
+    font-family: "apple";
+    font-size: 20px;
+    text-shadow: 0 2px 6px rgb(0 0 0 / 40%);
+}
+.hero_scrol .background_image{
+    position: absolute;
+    top: 68px;
+    left: calc(50% - 490px);
+    opacity: 30%;
+    z-index: 1;
+}
+.hero_scrol .character_main{
+    background-image: url("./background_image2.png");
+    width: 100%;
+    height: 100%;
+    background-repeat:no-repeat;
+    background-position: center;
+}
+
+.hero_scrol .swipper_place{
+
+    margin-left:auto;
+    margin-right: auto;
+    /* overflow: hidden; */
+    padding: 0;
+}
+
+.hero_scrol .swipper_hero{ 
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* justify-content: center; */
+    z-index: 1;
+}
+.swipper_hero .sub_swipper_hero{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: 600ms ease-in-out;
+}
+.sub_hero_1{
+    width: 100%;
+    height: 100%;
+}
+.sub_hero_1 .image_sub_hero{
+    position: absolute;
+    top: 7%;
+    left: 20%;
+    opacity: 20%;
+
+}
+.sub_hero_1 .hero_container1{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    /* justify-content:space-around; */
+    align-items: start;
+    width: 43vw;
+    height: 70.6vh;
+    top: 144px;
+    left: calc(50% - 450px);
+    /* background-color: red; */
+}
+.hero_container1 h1{
+    font-family: "apple";
+    padding-top:20px;
+    font-weight: 100;
+    font-size: 60px;
+    color: white;
+    padding-bottom: 2rem;
+    opacity: 70%;
+
+}
+.hero_container1 .hero_desc{
+    position: relative;
+    width: 100%;
+    height: 9%;
+    background-image: url(background_image_lsit.jpeg);
+    background-repeat: no-repeat;
+    background-size: 3.2rem;
+}
+.hero_desc .el_name{
+    position: relative;
+    left: 3.0em;
+    background: #cca574;
+    /* padding-bottom: 3rem; */
+    /* background-color: black; */
+    height: 100%;
+    width: 60%;
+}
+.hero_desc p{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    font-size: 2rem;
+    font-family:"apple";
+    text-align: start;
+    transform: translateY(6px);
+}
+.hero_container1 .hero_info{
+    position:relative;
+    width: 80%;
+    height: 40%;
+    margin-top: 2rem;
+    /* margin-top: rem; */
+    background-color: rgba(1,1,1,0.5);
+    border-radius: 5px;
+}
+.hero_info p{
+    color:white;
+    font-size: 18px;
+    font-family:"apple";
+    text-align: start;
+    padding:20px;
+}
+.sub_hero_1 .image_sub_hero1{
+    position: absolute;
+    bottom: 0;
+    right:0px;
+    width: 70%;
+    height: 100%;
+    object-fit: cover;
+}
+.swipper_place .nav{
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    background-color:rgba(204,204,204,0.2);
+    bottom: 0px;
+    padding: 10px;
+    z-index: 10;
+}
+.nav button{
+    border-color:transparent;
+    background-color: transparent;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+
+
+footer {
+    position: relative;
+    background-color: black;
+    width: 100vw;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main_footer {
+    position: relative;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 90%;
+}
+
+.main_footer img {
+    width: 30%;
+    height: 20%;
+}
+
+.wrapper_logo {
+
+    position: relative;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+    /* flex-direction: column; */
+}
+
+.container_logo {
+    position: relative;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.container_logo span {
+    color: rgba(140, 140, 140, 1);
+    font-family: "apple";
+    font-size: 15px;
+}
+
+.last_container span {
+    color: white;
+    font-family: "apple";
+    font-size: 15px;
+
+}
+
+.container_logo .image1 {
+    /* width: 14.9%;
+    height: 58%;
+    padding: 15px;
+    object-fit: cover; */
+    height: 60%;
+    width: 14%;
+    padding: 15px;  
+}
+
+.wrapper_logo img {
+    display: block;
+    padding: 5px;
+    width: 10%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.last_container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+}
+
+.container_footer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding: 5px;
+}
+
+.container_footer a {
+    color: rgba(140, 140, 140, 1);
+    padding: 10px;
+    font-family: "apple"
+}
+
+
+@keyframes animate{
+    0%{
+        background-image: url("./liyue_bg2.png");
+    }
+    20%{
+        background-image: url("./liyue_bg2.png");
+    }
+    40%{
+        background-image: url("./liyue_bg2.png");
+    }
+    60%{
+        background-image: url("liyur_bg.jpg");
+
+    }
+    80%{
+        background-image: url("liyur_bg.jpg");
+
+    }
+    100%{
+        background-image: url("liyur_bg.jpg");
+    }
+}
